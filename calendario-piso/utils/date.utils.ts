@@ -23,8 +23,8 @@ export const getStartingWeekDay = (
 };
 
 export const getLastDayOfMonth = (
-  currentMonth: number,
-  currentYear: number
+  currentYear: number,
+  currentMonth: number
 ) => {
   if (currentMonth === 11) {
     return new Date(currentYear + 1, currentMonth + 1, 0).getDate();

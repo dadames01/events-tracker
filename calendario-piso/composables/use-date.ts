@@ -2,7 +2,7 @@ export const useDate = (currentDate: Date) => {
   const currentMonth = currentDate.getMonth();
   const currentYear = currentDate.getFullYear();
   const firstWeekDay = getStartingWeekDay(currentYear, currentMonth);
-  const lastDayOfMonth = getLastDayOfMonth(currentMonth, currentYear);
+  const lastDayOfMonth = getLastDayOfMonth(currentYear, currentMonth);
 
   const currentMonthString = months[currentMonth];
 
