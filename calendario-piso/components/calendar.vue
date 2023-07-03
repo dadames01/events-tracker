@@ -1,13 +1,5 @@
 <script setup>
-const { month, year } = useDate(new Date());
-const tests = computed(() => {
-  const a = new Array(31);
-  const array = [];
-  for (let i = 0; i < a.length; i++) {
-    array.push(i + 1);
-  }
-  return array;
-});
+const { month, year, daysInfo } = useDate(new Date());
 </script>
 
 <template>
@@ -23,8 +15,8 @@ const tests = computed(() => {
         </div>
       </div>
       <div class="grid grid-cols-7 gap-px">
-        <div v-for="test in tests">
-          <DayOfTheMonth :dayNumber="test" />
+        <div v-for="dayInfo in daysInfo">
+          <DayOfTheMonth :dayNumber="dayInfo.dayNumber" />
         </div>
       </div>
     </div>
