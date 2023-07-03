@@ -27,7 +27,7 @@ export const getLastDayOfMonth = (
   currentMonth: number
 ) => {
   if (currentMonth === 11) {
-    return new Date(currentYear + 1, currentMonth + 1, 0).getDate();
+    return 31;
   }
   return new Date(currentYear, currentMonth + 1, 0).getDate();
 };
